@@ -1,0 +1,19 @@
+{
+  "name": "hill-to-himalaya",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "./tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "dev": "./tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
+  }
+}

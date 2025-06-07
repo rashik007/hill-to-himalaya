@@ -1,0 +1,295 @@
+@import "tailwindcss";
+
+
+@import "tailwindcss";
+
+/* Global Theme Configuration */
+@theme {
+  /* Custom Colors */
+  --color-primary: #D57A66;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #d18a7a;
+  
+  --color-secondary: #64748b;
+  --color-secondary-dark: #334155;
+  --color-secondary-light: #cbd5e1;
+  
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+  --color-accent-light: #fbbf24;
+  
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  --color-background: #F4EDED;
+  
+  /* Custom Grays */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  
+  /* Typography */
+  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Custom Header Font Sizes */
+  --font-size-h1: 5.61rem;
+  --font-size-h2: 4.209rem;
+  --font-size-h3: 3.157rem;
+  --font-size-h4: 2.369rem;
+  --font-size-h5: 1.777rem;
+  --font-size-h6: 1.333rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 5rem;
+  --spacing-5xl: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Base Styles */
+@layer base {
+  html {
+    font-family: var(--font-family-body);
+    line-height: 1.6;
+    color: var(--color-gray-800);
+  }
+  
+  body {
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-gray-900);
+  }
+  
+  h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  h2 {
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h3 {
+    font-size: var(--font-size-h3);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h4 {
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  h5 {
+    font-size: var(--font-size-h5);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  h6 {
+    font-size: var(--font-size-h6);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  p {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-gray-700);
+  }
+  
+  a {
+    /* color: var(--color-primary); */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    /* color: var(--color-primary-dark); */
+    /* text-decoration: underline; */
+  }
+  
+  code {
+    font-family: var(--font-family-mono);
+    background-color: var(--color-gray-100);
+    padding: 0.125rem 0.25rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875em;
+  }
+
+  section {
+    margin-top: var(--spacing-5xl);
+    margin-bottom: var(--spacing-5xl);
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  blockquote {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-3xl);
+    color: var(--color-white);
+    line-height: 1.7;
+    
+    
+}
+
+    blockquote::before {
+        content: '"';
+        font-family: var(--font-mono);
+        font-size: var(--font-size-3xl);
+        color: var(--color-white);
+        line-height: 1.7;
+    }
+    blockquote::after {
+        content: '"';
+        font-family: var(--font-mono);
+        font-size: var(--font-size-3xl);
+        color: var(--color-white);
+        line-height: 1.7;
+    }
+
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot,button.owl-prev span, button.owl-next span {
+        background: var(--color-primary);
+        display: inline-block;
+        padding: 4px 18px;
+        border-radius: 50%;
+        font-size: 24px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel button.owl-dot,button.owl-prev:hover span, button.owl-next:hover span {
+        background: var(--color-primary/20);
+    }
+    
+    .owl-theme .owl-nav [class*=owl-]:hover {
+        background: none !important;
+        color: var(--color-gray-800) !important;
+    }
+
+    .owl-theme .owl-nav [class*=owl-]:hover span {
+        background: var(--color-primary-light);
+    }
+
+    .owl-theme .owl-nav {
+        position: absolute;
+        z-index: -1;
+        width: 110%;
+        top: 30%;
+        left: -5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .owl-theme .owl-dots {
+        margin-top: 1rem;
+    }
+
+    .link__text {
+        color: var(--color-primary);
+        cursor: pointer
+
+    }
+    .link__text:hover {
+        text-decoration: underline;
+    }
+
+  
+}
+
+/* Custom Component Classes */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200 cursor-pointer inline-block text-center;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 px-14 py-4 rounded-lg cursor-pointer;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-dark;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+  
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 lg:py-24;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .blog-cards-grid {
+    @apply grid gap-16 grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .blog__card__single {
+    @apply   transition-shadow duration-300 ;
+  }
+
+    .blog__tag__info {
+        @apply capitalize text-sm text-primary cursor-default my-3 no-underline;
+    }
+
+    .blog__card__image {
+        @apply rounded-xl hover:scale-102 duration-300 ease-in-out w-full h-[300px] object-cover
+    }
+
+  
+}
