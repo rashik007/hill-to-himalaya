@@ -238,6 +238,21 @@
         text-decoration: underline;
     }
 
+    .social__icons i {
+      font-size: 28px;
+      margin-right: 16px;
+      color: #555;
+      border: 1.5px solid #555;
+      padding: 8px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .social__icons i:hover {
+      background: #555;
+      color: #fff;
+    }
+
   
 }
 
@@ -290,6 +305,8 @@
     .blog__card__image {
         @apply rounded-xl hover:scale-102 duration-300 ease-in-out w-full h-[300px] object-cover
     }
-
+    .footer__tiles {
+      @apply grid gap-16 grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+    }
   
 }
