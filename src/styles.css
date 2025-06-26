@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* @import "@flaticon/flaticon-uicons/css/all/all.css"; */
+
 
 
 @import "tailwindcss";
@@ -390,9 +392,30 @@ a:hover {
     @apply font-normal min-w-[50px] min-h-[50px] text-center !flex items-center justify-center; 
   }
   .blog__tags a  {
-    @apply inline-block uppercase bg-white px-3 py-2  rounded-sm;
+    @apply text-sm inline-block uppercase bg-white px-2 py-1  rounded-sm;
   }
   .photo-grid img {
     @apply h-auto shadow-md hover:shadow-lg transition-shadow
+  }
+
+  /* icons group details blog single  */
+  .icons__grp .icon_detail {
+    @apply flex items-center gap-2;
+  }
+  .icons__grp .icon_detail i {
+    @apply text-4xl text-primary;
+  }
+  .icons__grp .icon_detail .title {
+    @apply mb-0.5 text-gray-400 font-semibold text-[10px] uppercase;
+  }
+  .icons__grp .icon_detail .detail {
+    @apply  mb-0 text-lg
+  }
+
+  .blog_content p {
+    @apply my-8 text-xl leading-[1.8] font-light
+  }
+  .blog_content img {
+    @apply w-full max-w-full h-[450px] max-h-full;
   }
 }
